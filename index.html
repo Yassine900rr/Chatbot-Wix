@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Assistant du site</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="chat-widget" aria-label="Assistant du site">
+    <button class="chat-toggle" id="chat-toggle" type="button" aria-expanded="false" aria-controls="chat-panel">
+      <span aria-hidden="true">💬</span> Poser une question
+    </button>
+
+    <section class="chat-panel" id="chat-panel" aria-label="Discussion avec l’assistant" hidden>
+      <header class="chat-header">
+        <div><strong>Assistant du site</strong><span class="status">En ligne</span></div>
+        <button class="close-button" id="chat-close" type="button" aria-label="Fermer la discussion">×</button>
+      </header>
+      <div class="messages" id="messages" role="log" aria-live="polite">
+        <p class="message bot-message">Bonjour ! Posez-moi une question sur le site.</p>
+      </div>
+      <form class="chat-form" id="chat-form">
+        <label class="visually-hidden" for="user-input">Votre message</label>
+        <input id="user-input" type="text" placeholder="Écrivez votre question…" autocomplete="off" required>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
